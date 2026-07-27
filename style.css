@@ -990,8 +990,9 @@ footer{
 
     display:flex;
     flex-direction:column;
-}
 
+    height:100%;
+}
 .course-box:hover{
     transform:translateY(-10px);
     box-shadow:0 20px 40px rgba(91,33,182,.20);
@@ -1005,11 +1006,12 @@ footer{
 
 .course-details{
     padding:25px;
+
     display:flex;
     flex-direction:column;
-    height:100%;
-}
 
+    flex:1;
+}
 .badge{
     display:inline-block;
     background:#7C3AED;
@@ -1033,6 +1035,7 @@ footer{
 .course-details ul{
     list-style:none;
     padding:20px 0;
+    margin-bottom:auto;
 }
 
 .course-details ul li{
@@ -1045,8 +1048,20 @@ footer{
     margin-right:8px;
 }
 .course-details .btn{
-    margin-top:auto;
-    align-self:flex-start;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:170px;
+
+    height:52px;
+
+    border-radius:50px;
+
+    margin-top:25px;
 }
 /*================ GALLERY PAGE =================*/
 
