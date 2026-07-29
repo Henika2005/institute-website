@@ -38,7 +38,7 @@ header{
 .logo{
     font-size:28px;
     font-weight:700;
-    color:#5B21B6;
+    color:#ffffff;
 }
 
 .logo i{
@@ -53,7 +53,7 @@ header{
 
 .nav-links a{
     text-decoration:none;
-    color:#1F2937;
+    color:#ffffff;
     font-weight:500;
     position:relative;
     transition:.3s;
@@ -937,18 +937,16 @@ footer{
 }
 
 .course-box{
-	width:100%;
+    width:100%;
     max-width:100%;
+    overflow:hidden;
+    box-sizing:border-box;
+
     background:#fff;
     border-radius:20px;
-    overflow:hidden;
     box-shadow:0 10px 30px rgba(0,0,0,.08);
-    transition:.4s;
- box-sizing:border-box;
     display:flex;
     flex-direction:column;
-
-    height:100%;
 }
 .course-box:hover{
     transform:translateY(-10px);
@@ -960,10 +958,9 @@ border:2px solid #4F46E5;
 .course-box img{
     width:100%;
     height:auto;
+    display:block;
     object-fit:cover;
-display:block;
 }
-
 .course-details{
     padding:25px;
 
@@ -1008,20 +1005,14 @@ display:block;
     margin-right:8px;
 }
 .course-details .btn{
-
-    display:inline-flex;
-
+    display:flex;
     align-items:center;
-
     justify-content:center;
-
-    min-width:170px;
-
+    width:100%;
+    min-width:0;
     height:52px;
-
-    border-radius:50px;
-
     margin-top:25px;
+    border-radius:50px;
 }
 /*================ GALLERY PAGE =================*/
 
@@ -1388,7 +1379,7 @@ body{
     display:block;
     font-size:28px;
     cursor:pointer;
-    color:#5B21B6;
+    color:#ffffff;
 }
 
 .navbar .btn{
@@ -1585,4 +1576,26 @@ body{
 
 *{
     box-sizing:border-box;
+}
+@media (max-width:768px){
+
+    .course-details{
+        padding:20px;
+    }
+
+    .course-details .btn{
+        width:100%;
+        min-width:0;
+    }
+
+    .course-box{
+        width:100%;
+        max-width:100%;
+    }
+
+    .course-box img{
+        width:100%;
+        height:auto;
+    }
+
 }
