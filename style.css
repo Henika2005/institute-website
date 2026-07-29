@@ -1231,54 +1231,7 @@ transform:translateY(0);
 animation:fadeUp .8s ease forwards;
 
 }
-/* ================= MOBILE NAVBAR ================= */
 
-.menu-toggle{
-    display:none;
-    font-size:30px;
-    color:#5B21B6;
-    cursor:pointer;
-}
-
-@media screen and (max-width:768px){
-
-    .menu-toggle{
-        display:block;
-    }
-
-    .nav-links{
-
-        display:none;
-
-        flex-direction:column;
-
-        position:absolute;
-
-        top:75px;
-
-        left:0;
-
-        width:100%;
-
-        background:#fff;
-
-        padding:20px 0;
-
-        text-align:center;
-
-        box-shadow:0 10px 20px rgba(0,0,0,.1);
-
-    }
-
-    .nav-links.active{
-        display:flex;
-    }
-
-    .navbar .btn{
-        display:none;
-    }
-
-}
 /*================ PRELOADER =================*/
 
 #preloader{
@@ -1401,14 +1354,20 @@ body.dark-mode .nav-links a{
 body.dark-mode header{
     background:#111827;
 }
-
-/* ================= MOBILE FIX ================= */
+/* =====================================================
+   RESPONSIVE MOBILE CSS
+   Paste this at the VERY END of style.css
+===================================================== */
 
 @media (max-width:768px){
 
+/* Body */
 body{
     padding-top:75px;
+    overflow-x:hidden;
 }
+
+/* Navbar */
 
 .navbar{
     display:flex;
@@ -1425,11 +1384,15 @@ body{
 .menu-toggle{
     display:block;
     font-size:28px;
+    cursor:pointer;
+    color:#5B21B6;
 }
 
-.nav-actions{
+.navbar .btn{
     display:none;
 }
+
+/* Mobile Menu */
 
 .nav-links{
     display:none;
@@ -1437,11 +1400,12 @@ body{
     top:100%;
     left:0;
     width:100%;
-    background:#ffffff;
+    background:#fff;
     flex-direction:column;
     align-items:center;
     padding:20px 0;
-    box-shadow:0 10px 20px rgba(0,0,0,.1);
+    list-style:none;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
     z-index:999;
 }
 
@@ -1453,37 +1417,123 @@ body{
     margin:12px 0;
 }
 
+.nav-links a{
+    display:block;
+    font-size:18px;
+}
+
+/* Hero Section */
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    padding:60px 20px;
+    gap:40px;
+}
+
+.hero-text h1{
+    font-size:38px;
+}
+
+.hero-text p{
+    font-size:16px;
+}
+
+.hero-buttons{
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.hero-image img{
+    max-width:100%;
+}
+
+/* Common Banner */
+
 .page-hero{
-    height:220px;
     margin-top:0;
+    height:220px;
+    padding:20px;
 }
 
 .page-hero h1{
-    font-size:32px;
+    font-size:34px;
 }
 
 .page-hero p{
     font-size:16px;
-    padding:0 15px;
+    padding:0 10px;
 }
 
-.contact-page{
+/* Sections */
+
+.features,
+.about-preview,
+.courses,
+.achievements,
+.testimonials,
+.cta,
+.mission-section,
+.principal-section,
+.faculty,
+.why-us,
+.courses-page,
+.gallery-page,
+.contact-page,
+.faq{
     padding:60px 20px;
 }
 
+/* Two-column layouts */
+
+.about-preview,
+.principal-section,
 .contact-container{
     flex-direction:column;
 }
 
-.contact-form,
-.contact-image{
-    width:100%;
-    min-width:100%;
-}
+/* Grids */
 
-.contact-info{
+.feature-container,
+.course-container,
+.achievement-container,
+.testimonial-container,
+.faculty-container,
+.why-container,
+.course-grid,
+.gallery-grid,
+.contact-info,
+.mission-container{
     grid-template-columns:1fr;
 }
+
+/* Images */
+
+.about-image,
+.principal-image,
+.contact-image{
+    width:100%;
+}
+
+.about-image img,
+.principal-image img,
+.contact-image img{
+    width:100%;
+}
+
+/* Contact Form */
+
+.contact-form{
+    width:100%;
+    padding:25px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+}
+
+/* Map */
 
 .map-section{
     padding:20px;
@@ -1491,6 +1541,37 @@ body{
 
 .map-section iframe{
     height:280px;
+}
+
+/* Footer */
+
+.footer-container{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.social-icons{
+    justify-content:center;
+}
+
+/* Buttons */
+
+.btn,
+.btn-outline{
+    width:100%;
+    text-align:center;
+}
+
+/* Titles */
+
+.section-title h2{
+    font-size:30px;
+}
+
+.hero-text h1,
+.page-hero h1,
+.cta h2{
+    line-height:1.3;
 }
 
 }
